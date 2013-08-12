@@ -60,13 +60,13 @@ class Vim < Formula
     # when calling "make install".
     system "./configure", "--prefix=#{HOMEBREW_PREFIX}",
                           "--mandir=#{man}",
-                          "--enable-gui=no",
-                          "--without-x",
+                          "--enable-gui",
+                          "--with-x",
                           "--enable-multibyte",
                           "--with-tlib=ncurses",
                           "--enable-cscope",
-                          "--with-features=huge",
-                          "--with-compiledby=Homebrew",
+                          "--with-features=normal",
+                          "--with-compiledby=Sergi",
                           *opts
     system "make"
     # If stripping the binaries is not enabled, vim will segfault with
