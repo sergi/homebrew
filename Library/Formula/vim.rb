@@ -60,12 +60,13 @@ class Vim < Formula
     # when calling "make install".
     system "./configure", "--prefix=#{HOMEBREW_PREFIX}",
                           "--mandir=#{man}",
-                          "--enable-gui",
-                          "--with-x",
+                          "--enable-gui=no",
+                          "--without-x",
                           "--enable-multibyte",
+                          "--enable-clipboard",
                           "--with-tlib=ncurses",
                           "--enable-cscope",
-                          "--with-features=normal",
+                          "--with-features=huge",
                           "--with-compiledby=Sergi",
                           *opts
     system "make"
