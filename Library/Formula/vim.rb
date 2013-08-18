@@ -16,7 +16,7 @@ class Vim < Formula
   env :std
 
   LANGUAGES         = %w(lua mzscheme perl python tcl ruby)
-  DEFAULT_LANGUAGES = %w(ruby python)
+  DEFAULT_LANGUAGES = %w(ruby python lua)
 
   option "override-system-vi", "Override system vi"
   option "disable-nls", "Build vim without National Language Support (translated messages, keymaps)"
